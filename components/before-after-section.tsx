@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
-import { MessageCircle, Phone } from "lucide-react"
+import { MessageCircle, Phone, ChevronRight } from "lucide-react"
 
 const cases = [
   {
@@ -56,7 +56,7 @@ function CaseCard({ caseData }: { caseData: (typeof cases)[0] }) {
               <circle cx="11" cy="11" r="8" strokeWidth="2" />
               <path d="m21 21-4.35-4.35" strokeWidth="2" strokeLinecap="round" />
             </svg>
-            <span className="text-base sm:text-xl font-bold">ケース{caseData.id}</span>
+            <span className="text-base sm:text-xl md:text-2xl font-bold">ケース{caseData.id}</span>
           </div>
           <h3 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg">
             {caseData.title}
@@ -170,9 +170,25 @@ export function BeforeAfterSection() {
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="hidden md:flex -left-16 lg:-left-20" />
-            <CarouselNext className="hidden md:flex -right-16 lg:-right-20" />
+            <CarouselPrevious className="left-0 md:-left-16 lg:-left-20 opacity-100" />
+            <CarouselNext className="right-0 md:-right-16 lg:-right-20 opacity-100 flex items-center justify-center gap-1">
+              <span className="hidden sm:inline text-sm font-medium">次へ</span>
+              <ChevronRight className="w-5 h-5" />
+            </CarouselNext>
           </Carousel>
+
+          <div className="flex justify-center gap-2 mt-6 md:mt-8">
+            {cases.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  // This would connect to carousel API in a real implementation
+                }}
+                className="w-2 h-2 rounded-full bg-muted-foreground/30 hover:bg-muted-foreground/60 transition-colors"
+                aria-label={`スライド ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
