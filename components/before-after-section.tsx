@@ -120,7 +120,7 @@ function CaseCard({ caseData }: { caseData: (typeof cases)[0] }) {
               rel="noopener noreferrer"
             >
               <MessageCircle className="mr-1 h-4 w-4" />
-              <span className="hidden sm:inline">LINE</span>で問い合わせ
+              <span>LINEで問い合わせ</span>
             </a>
           </Button>
           <Button
@@ -131,7 +131,7 @@ function CaseCard({ caseData }: { caseData: (typeof cases)[0] }) {
           >
             <a href="tel:08041442009">
               <Phone className="mr-1 h-4 w-4" />
-              <span className="hidden sm:inline">電話</span>で問い合わせ
+              <span>電話で問い合わせ</span>
             </a>
           </Button>
         </div>
@@ -153,7 +153,7 @@ export function BeforeAfterSection() {
           </p>
         </div>
 
-        <div className="relative w-full">
+        <div className="relative w-full px-6 sm:px-8 lg:px-12">
           <Carousel
             opts={{
               align: "start",
@@ -173,10 +173,9 @@ export function BeforeAfterSection() {
               ))}
             </CarouselContent>
 
-            <div className="flex justify-center gap-3 mt-4 sm:mt-6">
-              <CarouselPrevious className="relative left-0 translate-y-0 opacity-100 w-10 h-10 sm:w-12 sm:h-12 border-2" />
-              <CarouselNext className="relative right-0 translate-y-0 opacity-100 w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center" />
-            </div>
+            <CarouselPrevious className="absolute left-0 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 border-2 bg-white/80 hover:bg-white/95 transition-colors z-10" />
+
+            <CarouselNext className="absolute right-0 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 border-2 bg-white/80 hover:bg-white/95 transition-colors z-10" />
           </Carousel>
         </div>
       </div>

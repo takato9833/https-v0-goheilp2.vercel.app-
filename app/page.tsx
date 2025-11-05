@@ -17,8 +17,8 @@ export default function Home({
   return (
     <main className="min-h-screen">
       <HeroSection prefecture={searchParams.prefecture} />
-      <BrandStory />
       <BeforeAfterSection />
+      <BrandStory />
       <ServicesSection />
       <PricingSection />
       <TestimonialsSection />
