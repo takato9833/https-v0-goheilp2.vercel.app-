@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
-import { MessageCircle, Phone, ChevronRight } from "lucide-react"
+import { MessageCircle, Phone } from "lucide-react"
 
 const cases = [
   {
@@ -47,18 +47,18 @@ const cases = [
 
 function CaseCard({ caseData }: { caseData: (typeof cases)[0] }) {
   return (
-    <Card className="overflow-hidden border-2 h-full flex flex-col">
+    <Card className="overflow-hidden border-2 h-full flex flex-col bg-white">
       {/* Case header with image */}
       <div className="relative aspect-[4/3] sm:aspect-[16/10] bg-gradient-to-br from-blue-900 to-blue-700">
-        <div className="absolute top-3 sm:top-6 left-3 sm:left-6 flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 z-10">
-          <div className="bg-blue-800/90 text-white px-3 sm:px-6 py-2 sm:py-3 rounded-lg flex items-center gap-2 sm:gap-3">
-            <svg className="w-4 h-4 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div className="absolute top-2 sm:top-4 left-2 sm:left-4 flex flex-col gap-1 sm:gap-2 z-10">
+          <div className="bg-blue-800/90 text-white px-2 sm:px-4 py-1 sm:py-2 rounded text-xs sm:text-sm md:text-base font-bold flex items-center gap-1">
+            <svg className="w-3 h-3 sm:w-4 sm:h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <circle cx="11" cy="11" r="8" strokeWidth="2" />
               <path d="m21 21-4.35-4.35" strokeWidth="2" strokeLinecap="round" />
             </svg>
-            <span className="text-base sm:text-xl md:text-2xl font-bold">ケース{caseData.id}</span>
+            ケース{caseData.id}
           </div>
-          <h3 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold drop-shadow-lg">
+          <h3 className="text-white text-sm sm:text-lg md:text-xl lg:text-2xl font-bold drop-shadow-lg line-clamp-2">
             {caseData.title}
           </h3>
         </div>
@@ -70,50 +70,48 @@ function CaseCard({ caseData }: { caseData: (typeof cases)[0] }) {
       </div>
 
       {/* Pricing details */}
-      <div className="bg-muted/30 p-4 sm:p-6 md:p-8 lg:p-12 space-y-6 sm:space-y-8 flex-grow">
-        <div className="space-y-3 sm:space-y-4">
+      <div className="bg-muted/30 p-3 sm:p-4 md:p-6 lg:p-8 space-y-3 sm:space-y-4 flex-grow">
+        <div className="space-y-2 sm:space-y-3">
           {Array.isArray(caseData.items) ? (
             caseData.items.map((item, index) => (
-              <p key={index} className="text-base sm:text-lg md:text-xl leading-relaxed">
+              <p key={index} className="text-xs sm:text-sm md:text-base lg:text-lg leading-snug">
                 {item}
               </p>
             ))
           ) : (
-            <p className="text-base sm:text-lg md:text-xl leading-relaxed">{caseData.items}</p>
+            <p className="text-xs sm:text-sm md:text-base lg:text-lg leading-snug">{caseData.items}</p>
           )}
         </div>
 
-        <div className="space-y-4 sm:space-y-6">
-          <div className="flex items-center justify-between py-3 sm:py-4 border-b-2 border-border gap-2">
-            <span className="text-lg sm:text-xl md:text-2xl font-bold">買取額</span>
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-red-600">
+        <div className="space-y-2 sm:space-y-3">
+          <div className="flex items-center justify-between py-2 sm:py-3 border-b-2 border-border gap-2">
+            <span className="text-sm sm:text-base md:text-lg font-bold">買取額</span>
+            <span className="text-lg sm:text-2xl md:text-3xl font-bold text-red-600">
               {caseData.purchaseAmount.toLocaleString()}円
             </span>
           </div>
 
-          <div className="flex items-center justify-between py-3 sm:py-4 border-b-2 border-border gap-2">
-            <span className="text-lg sm:text-xl md:text-2xl font-bold">片付け費</span>
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-muted-foreground">
+          <div className="flex items-center justify-between py-2 sm:py-3 border-b-2 border-border gap-2">
+            <span className="text-sm sm:text-base md:text-lg font-bold">片付け費</span>
+            <span className="text-lg sm:text-2xl md:text-3xl font-bold text-muted-foreground">
               {caseData.cleanupFee.toLocaleString()}円
             </span>
           </div>
 
-          <div className="flex items-center justify-between py-4 sm:py-6 bg-blue-700 text-white rounded-lg px-4 sm:px-6 mt-4 sm:mt-6 gap-2">
-            <span className="text-lg sm:text-xl md:text-2xl font-bold">{caseData.returnLabel}</span>
-            <span className="text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold">
+          <div className="flex items-center justify-between py-2 sm:py-3 bg-blue-700 text-white rounded px-3 sm:px-4 mt-2 sm:mt-3 gap-2">
+            <span className="text-sm sm:text-base md:text-lg font-bold">{caseData.returnLabel}</span>
+            <span className="text-lg sm:text-2xl md:text-3xl lg:text-4xl font-bold">
               {caseData.returnAmount.toLocaleString()}円
             </span>
           </div>
         </div>
 
-        <p className="text-xs sm:text-sm text-muted-foreground pt-2 sm:pt-4">
-          ※買取後のお片付けは他社への依頼でも可能です。
-        </p>
+        <p className="text-xs text-muted-foreground pt-1 sm:pt-2">※買取後のお片付けは他社への依頼でも可能です。</p>
 
-        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 sm:pt-6">
+        <div className="flex flex-col gap-2 pt-2 sm:pt-3">
           <Button
-            size="lg"
-            className="flex-1 text-base sm:text-lg py-6 sm:py-6 bg-[#06C755] hover:bg-[#06C755]/90 text-white"
+            size="sm"
+            className="w-full text-xs sm:text-sm py-4 sm:py-5 bg-[#06C755] hover:bg-[#06C755]/90 text-white"
             asChild
           >
             <a
@@ -121,19 +119,19 @@ function CaseCard({ caseData }: { caseData: (typeof cases)[0] }) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <MessageCircle className="mr-2 h-5 w-5" />
-              LINEで問い合わせ
+              <MessageCircle className="mr-1 h-4 w-4" />
+              <span className="hidden sm:inline">LINE</span>で問い合わせ
             </a>
           </Button>
           <Button
-            size="lg"
+            size="sm"
             variant="outline"
-            className="flex-1 text-base sm:text-lg py-6 sm:py-6 border-2 bg-transparent"
+            className="w-full text-xs sm:text-sm py-4 sm:py-5 border-2 bg-transparent"
             asChild
           >
             <a href="tel:08041442009">
-              <Phone className="mr-2 h-5 w-5" />
-              電話で問い合わせ
+              <Phone className="mr-1 h-4 w-4" />
+              <span className="hidden sm:inline">電話</span>で問い合わせ
             </a>
           </Button>
         </div>
@@ -144,18 +142,18 @@ function CaseCard({ caseData }: { caseData: (typeof cases)[0] }) {
 
 export function BeforeAfterSection() {
   return (
-    <section className="py-12 sm:py-20 md:py-32 bg-card">
+    <section className="py-8 sm:py-12 md:py-20 bg-card">
       <div className="container px-4">
-        <div className="text-center mb-8 sm:mb-12 md:mb-16 space-y-3 sm:space-y-4">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight">施工事例</h2>
-          <p className="text-base sm:text-lg text-muted-foreground text-balance max-w-2xl mx-auto px-4">
+        <div className="text-center mb-6 sm:mb-8 md:mb-12 space-y-2 sm:space-y-3">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold tracking-tight">施工事例</h2>
+          <p className="text-sm sm:text-base md:text-lg text-muted-foreground text-balance max-w-2xl mx-auto px-4">
             ただ片付けるだけでなく、
             <br className="sm:hidden" />
             "価値のある"整理を。
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto px-2">
+        <div className="relative w-full">
           <Carousel
             opts={{
               align: "start",
@@ -163,32 +161,21 @@ export function BeforeAfterSection() {
             }}
             className="w-full"
           >
-            <CarouselContent className="gap-4 md:gap-6">
+            <CarouselContent className="gap-3 sm:gap-4 md:gap-6">
               {cases.map((caseData) => (
-                <CarouselItem key={caseData.id} className="md:basis-1/2 lg:basis-1/3">
-                  <CaseCard caseData={caseData} />
+                <CarouselItem key={caseData.id} className="basis-full sm:basis-1/2 lg:basis-1/3">
+                  <div className="px-1">
+                    <CaseCard caseData={caseData} />
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
-            <CarouselPrevious className="left-0 md:-left-16 lg:-left-20 opacity-100" />
-            <CarouselNext className="right-0 md:-right-16 lg:-right-20 opacity-100 flex items-center justify-center gap-1">
-              <span className="hidden sm:inline text-sm font-medium">次へ</span>
-              <ChevronRight className="w-5 h-5" />
-            </CarouselNext>
-          </Carousel>
 
-          <div className="flex justify-center gap-2 mt-6 md:mt-8">
-            {cases.map((_, index) => (
-              <button
-                key={index}
-                onClick={() => {
-                  // This would connect to carousel API in a real implementation
-                }}
-                className="w-2 h-2 rounded-full bg-muted-foreground/30 hover:bg-muted-foreground/60 transition-colors"
-                aria-label={`スライド ${index + 1}`}
-              />
-            ))}
-          </div>
+            <div className="flex justify-center gap-3 mt-4 sm:mt-6">
+              <CarouselPrevious className="relative left-0 translate-y-0 opacity-100 w-10 h-10 sm:w-12 sm:h-12 border-2" />
+              <CarouselNext className="relative right-0 translate-y-0 opacity-100 w-10 h-10 sm:w-12 sm:h-12 border-2 flex items-center justify-center" />
+            </div>
+          </Carousel>
         </div>
       </div>
     </section>
