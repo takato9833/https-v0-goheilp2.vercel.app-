@@ -147,6 +147,8 @@ export function ContactForm() {
               <p className="text-sm text-muted-foreground leading-relaxed">
                 ※お見積もりは無料です。現地調査も承っております。
                 <br />
+                ※買取の際には身分証明書が必要になります。（例：運転免許証、健康保険証、パスポート、その他）
+                <br />
                 ※お急ぎの場合はお電話でのご連絡をおすすめいたします。
                 <br />
                 ※個人情報は厳重に管理し、お問い合わせ対応以外には使用いたしません。
