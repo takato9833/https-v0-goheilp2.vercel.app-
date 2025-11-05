@@ -158,6 +158,8 @@ export function BeforeAfterSection() {
             opts={{
               align: "start",
               loop: true,
+              dragFree: true,
+              skipSnaps: false,
             }}
             className="w-full"
           >
