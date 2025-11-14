@@ -5,7 +5,7 @@ import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Mail, Phone, MapPin, MessageCircle } from "lucide-react"
+import { Mail, Phone, MapPin, MessageCircle } from 'lucide-react'
 import { sendContactEmail } from "@/app/actions/send-email"
 
 export function ContactForm() {
@@ -74,7 +74,7 @@ export function ContactForm() {
               asChild
             >
               <a
-                href="https://qr-official.line.me/gs/M_978trppo_GW.png?oat_content=qr"
+                href="https://lin.ee/f4Z4Zde"
                 target="_blank"
                 rel="noopener noreferrer"
               >

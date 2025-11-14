@@ -3,7 +3,7 @@
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext } from "@/components/ui/carousel"
-import { MessageCircle, Phone } from "lucide-react"
+import { MessageCircle, Phone } from 'lucide-react'
 
 const cases = [
   {
@@ -115,7 +115,7 @@ function CaseCard({ caseData }: { caseData: (typeof cases)[0] }) {
             asChild
           >
             <a
-              href="https://qr-official.line.me/gs/M_978trppo_GW.png?oat_content=qr"
+              href="https://lin.ee/f4Z4Zde"
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button"
-import { Phone, MessageCircle } from "lucide-react"
+import { Phone, MessageCircle } from 'lucide-react'
 
 const PREFECTURE_MAP: Record<string, string> = {
   mie: "三重県",
@@ -91,7 +91,7 @@ export function HeroSection({ prefecture }: { prefecture?: string }) {
               asChild
             >
               <a
-                href="https://qr-official.line.me/gs/M_978trppo_GW.png?oat_content=qr"
+                href="https://lin.ee/f4Z4Zde"
                 target="_blank"
                 rel="noopener noreferrer"
               >

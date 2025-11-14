@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Check, MessageCircle, Phone } from "lucide-react"
+import { Check, MessageCircle, Phone } from 'lucide-react'
 
 const plans = [
   {
@@ -89,7 +89,7 @@ export function PricingSection() {
             asChild
           >
             <a
-              href="https://qr-official.line.me/gs/M_978trppo_GW.png?oat_content=qr"
+              href="https://lin.ee/f4Z4Zde"
               target="_blank"
               rel="noopener noreferrer"
             >
