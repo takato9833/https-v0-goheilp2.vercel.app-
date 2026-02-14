@@ -9,14 +9,15 @@ import { FaqSection } from "@/components/faq-section"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 
-export default function Home({
+export default async function Home({
   searchParams,
 }: {
-  searchParams: { prefecture?: string }
+  searchParams: Promise<{ prefecture?: string }>
 }) {
+  const { prefecture } = await searchParams
   return (
     <main className="min-h-screen">
-      <HeroSection prefecture={searchParams.prefecture} />
+      <HeroSection prefecture={prefecture} />
       <BeforeAfterSection />
       <BrandStory />
       <ServicesSection />
