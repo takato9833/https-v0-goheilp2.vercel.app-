@@ -1,6 +1,7 @@
 import { ColumnArticle } from "@/components/column/column-article"
 import { ColumnHeader } from "@/components/column/column-header"
 import { ColumnFooter } from "@/components/column/column-footer"
+import { Footer } from "@/components/footer"
 import type { Metadata } from "next"
 
 export const metadata: Metadata = {
@@ -15,6 +16,7 @@ export default function ColumnPage() {
       <ColumnHeader />
       <ColumnArticle />
       <ColumnFooter />
+      <Footer />
     </main>
   )
 }
