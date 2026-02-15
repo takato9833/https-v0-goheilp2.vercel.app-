@@ -6,6 +6,7 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { BeforeAfterSection } from "@/components/before-after-section"
 import { StrengthsSection } from "@/components/strengths-section"
 import { FaqSection } from "@/components/faq-section"
+import { ColumnSection } from "@/components/column-section"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 
@@ -24,6 +25,7 @@ export default function Home({
       <TestimonialsSection />
       <StrengthsSection />
       <FaqSection />
+      <ColumnSection />
       <ContactForm />
       <Footer />
     </main>
