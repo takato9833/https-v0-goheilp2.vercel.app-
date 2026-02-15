@@ -83,3 +83,26 @@ export interface BrandStoryContent {
   tagline: string
   paragraphs: string[]
 }
+
+// ---------------------------------------------------
+// Article / Column types
+// Ready for CMS or DB migration – swap the data source
+// while keeping the same type contract.
+// ---------------------------------------------------
+
+export interface Article {
+  slug: string
+  title: string
+  date: string
+  author: string
+  category: string
+  excerpt: string
+  thumbnail: string
+  content: ArticleBlock[]
+}
+
+export type ArticleBlock =
+  | { type: "paragraph"; text: string }
+  | { type: "heading"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "image"; src: string; alt: string }
