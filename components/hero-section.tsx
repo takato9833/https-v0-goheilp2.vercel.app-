@@ -36,7 +36,9 @@ export function HeroSection({ prefecture }: { prefecture?: string }) {
               {prefectureName}の出張買取・遺品整理・生前整理なら豪兵
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
-              近畿・東海エリア全域（大阪・京都・名古屋・三重・奈良・滋賀・兵庫など）に対応しています。深夜・早朝・お急ぎのご依頼も可能です。
+              近畿・東海エリア全域（大阪・京都・名古屋・三重・奈良・滋賀・兵庫など）に対応しています。
+              <br />
+              深夜・早朝・お急ぎのご依頼も可能です。
             </p>
           </div>
 

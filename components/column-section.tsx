@@ -12,7 +12,7 @@ export function ColumnSection() {
               <BookOpen className="h-7 w-7 sm:h-8 sm:w-8 text-accent" />
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight mb-2">
-              遺品整理お役立ちコラム
+              遺品整理お役立ち情報
             </h2>
             <div className="h-1 w-24 mx-auto bg-accent rounded-full" />
           </div>
@@ -29,7 +29,7 @@ export function ColumnSection() {
               size="lg"
               className="bg-accent text-accent-foreground hover:bg-accent/90 text-base sm:text-lg px-8 sm:px-10 py-3 sm:py-4 rounded-sm"
             >
-              <Link href="/column">コラムを見る</Link>
+              <Link href="/column">情報を見る</Link>
             </Button>
           </div>
 
