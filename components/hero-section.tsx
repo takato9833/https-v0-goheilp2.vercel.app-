@@ -33,7 +33,7 @@ export function HeroSection({ prefecture }: { prefecture?: string }) {
         <div className="mx-auto max-w-4xl text-center space-y-6 sm:space-y-8">
           <div className="space-y-3 sm:space-y-4">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-accent">
-              {prefectureName}の遺品整理・生前整理なら豪兵
+              {prefectureName}の出張買取・遺品整理・生前整理なら豪兵
             </h1>
             <p className="text-sm sm:text-base md:text-lg text-muted-foreground leading-relaxed">
               近畿・東海エリア全域（大阪・京都・名古屋・三重・奈良・滋賀・兵庫など）に対応しています。深夜・早朝・お急ぎのご依頼も可能です。
@@ -63,7 +63,7 @@ export function HeroSection({ prefecture }: { prefecture?: string }) {
             あなたの<span className="text-accent">資産</span>です
             <br />
             <span className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mt-4 sm:mt-6 block font-normal">
-              遺品買取専門の
+              出張買取・遺品買取専門の
             </span>
             <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl mt-2 block text-accent font-bold tracking-wider">
               豪兵
@@ -72,7 +72,7 @@ export function HeroSection({ prefecture }: { prefecture?: string }) {
 
           {/* Subheading */}
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-muted-foreground text-balance max-w-2xl mx-auto leading-relaxed px-4">
-            遺品整理・供養・買取を、
+            出張買取・遺品整理を、
             <br className="sm:hidden" />
             誠意で一つに。
             <br />
@@ -80,6 +80,10 @@ export function HeroSection({ prefecture }: { prefecture?: string }) {
               どこよりも細部にわたって
               <br className="sm:hidden" />
               買取させて頂きます。
+            </span>
+            <br />
+            <span className="text-foreground font-semibold">
+              買取のみも可能です。
             </span>
           </p>
 
