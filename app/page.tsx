@@ -19,13 +19,13 @@ export default function Home({
     <main className="min-h-screen">
       <HeroSection prefecture={searchParams.prefecture} />
       <BeforeAfterSection />
+      <ColumnSection />
       <BrandStory />
       <ServicesSection />
       <PricingSection />
       <TestimonialsSection />
       <StrengthsSection />
       <FaqSection />
-      <ColumnSection />
       <ContactForm />
       <Footer />
     </main>
