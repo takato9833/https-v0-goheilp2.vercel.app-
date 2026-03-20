@@ -12,7 +12,7 @@ export function BrandStory() {
             「豪兵」は、
             <br className="sm:hidden" />
             <span className="text-foreground font-semibold">
-              "遺品買取から遺品整理、
+              "出張買取から遺品整理、
               <br className="sm:hidden" />
               不用品回収までトータルサポート"
             </span>

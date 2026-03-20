@@ -6,18 +6,21 @@ import { TestimonialsSection } from "@/components/testimonials-section"
 import { BeforeAfterSection } from "@/components/before-after-section"
 import { StrengthsSection } from "@/components/strengths-section"
 import { FaqSection } from "@/components/faq-section"
+import { ColumnSection } from "@/components/column-section"
 import { ContactForm } from "@/components/contact-form"
 import { Footer } from "@/components/footer"
 
-export default function Home({
+export default async function Home({
   searchParams,
 }: {
-  searchParams: { prefecture?: string }
+  searchParams: Promise<{ prefecture?: string }>
 }) {
+  const params = await searchParams
   return (
     <main className="min-h-screen">
-      <HeroSection prefecture={searchParams.prefecture} />
+      <HeroSection prefecture={params.prefecture} />
       <BeforeAfterSection />
+      <ColumnSection />
       <BrandStory />
       <ServicesSection />
       <PricingSection />
