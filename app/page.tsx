@@ -20,10 +20,10 @@ export default async function Home({
     <main className="min-h-screen">
       <HeroSection prefecture={params.prefecture} />
       <BeforeAfterSection />
+      <PricingSection />
       <ColumnSection />
       <BrandStory />
       <ServicesSection />
-      <PricingSection />
       <TestimonialsSection />
       <StrengthsSection />
       <FaqSection />
